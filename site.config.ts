@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'nodory-fe-dev-blog',
-  domain: 'nodory-dev-blog',
+  domain: 'nodory-dev-blog-kappa.vercel.app/',
   author: 'nodory',
 
   // open graph metadata (optional)
@@ -29,6 +29,7 @@ export default siteConfig({
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
+  utterancesGitHubRepo: 'hanmilLee/nextjs-notion-starter-kit',
   // whether or not to enable support for LQIP preview images (optional)
   isPreviewImageSupportEnabled: true,
 
