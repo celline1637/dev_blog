@@ -1,12 +1,3 @@
-/**
- * This file contains site-specifc style overrides for Notion elements from
- * react-notion-x.
- *
- * react-notion-x's goal is to match styling as close as possible to Notion,
- * whereas our goal with this site is to adjust Notion's styling in a few key
- * places to add some flare.
- */
-
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
@@ -48,10 +39,14 @@
   gap: 0.5rem;
 }
 
+.notion-table::-webkit-scrollbar {
+  display: none !important;
+}
+
 .notion-gallery-grid {
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  grid-gap: 6vmin;
-  gap: 6vmin;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+  gap: 1rem;
 }
 
 .notion-gallery-grid .notion-page-icon-inline {
@@ -78,7 +73,9 @@
 }
 
 .notion-collection-card-cover img {
-  border-radius: 16px;
+  /* border-radius: 16px; */
+  position: absolute;
+  top: 0;
 }
 
 .notion-collection-card {
@@ -86,8 +83,18 @@
 }
 
 .notion-collection-card-cover {
-  border-radius: 16px;
+  /* border-radius: 16px; */
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+  /* 정사각형 */
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
+}
+
+.notion-collection-card-cover span {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
 }
 
 .notion-collection-card-cover {
@@ -97,11 +104,15 @@
 }
 
 .notion-collection-card:hover .notion-collection-card-cover {
-  filter: brightness(120%);
+  filter: brightness(90%);
 }
 
 .notion-collection-card-body {
   padding: 10px;
+}
+
+.notion-aside-table-of-contents-header {
+  display: none;
 }
 
 /* only target safari */
@@ -344,6 +355,7 @@
 
 /* if you don't want rounded page icon images, remove this */
 .notion-page-icon-hero.notion-page-icon-image {
+  background-color: white;
   border-radius: 50%;
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
 }
