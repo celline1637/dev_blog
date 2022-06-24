@@ -29,6 +29,7 @@ import { PageHead } from './PageHead'
 import { PageAside } from './PageAside'
 import { Footer } from './Footer'
 import { NotionPageHeader } from './NotionPageHeader'
+import { ReactUtterances } from './ReactUtterances'
 
 import styles from './styles.module.css'
 
@@ -232,6 +233,20 @@ export const NotionPage: React.FC<types.PageProps> = ({
     g.block = block
   }
 
+  let comments: React.ReactNode = null
+
+  if (block.type === 'page' && block.parent_table === 'collection') {
+    comments = (
+      <ReactUtterances
+        repo='celline1637/dev_blog'
+        issueMap='issue-term'
+        issueTerm='title'
+        label='blog'
+        theme={isDarkMode ? 'github-dark' : 'github-light'}
+      />
+    )
+  }
+
   const canonicalPageUrl =
     !config.isDev && getCanonicalPageUrl(site, recordMap)(pageId)
 
@@ -282,9 +297,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
+        pageFooter={comments}
         footer={footer}
       />
-
     </>
   )
 }
