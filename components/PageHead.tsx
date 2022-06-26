@@ -28,8 +28,15 @@ export const PageHead: React.FC<
         name='viewport'
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
       />
-
       <meta name='robots' content='index,follow' />
+      <meta
+        name='google-site-verification'
+        content='pyKHG3CAFfyf46M3xi2-ZkR1R76-nnBejLgnfYCDZiM'
+      />
+      <meta
+        name='naver-site-verification'
+        content='6063546082e02811e42eb3a499028ca42b3ae825'
+      />
       <meta property='og:type' content='website' />
 
       {site && (
