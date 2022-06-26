@@ -28,8 +28,7 @@ Sitemap: ${host}/sitemap.xml
 `)
   } else {
     res.write(`User-agent: *
-Disallow: /
-
+Allow: /
 Sitemap: ${host}/sitemap.xml
 `)
   }
