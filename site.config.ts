@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'nodory-fe-dev-blog',
-  domain: 'nodory-dev-blog-kappa.vercel.app/',
+  domain: 'nodory-dev-blog-kappa.vercel.app',
   author: 'nodory',
 
   // open graph metadata (optional)
@@ -56,7 +56,7 @@ export default siteConfig({
     {
       title: 'About',
       pageId: 'c0da9a84486e4f7593c6ed7c5d3b0438'
-    },
+    }
     // {
     //   title: 'Contact',
     //   pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
