@@ -260,7 +260,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const socialDescription =
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
-
+  console.log(isBlogPost ? false : !!recordMap.preview_images)
   return (
     <>
       <PageHead
